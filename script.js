@@ -1,6 +1,11 @@
-let lista = document.getElementById("lista")
-let numero = lista.getAttribute("num")
+let lista = document.getElementById("ul")
 
-for(i=0; i < numero; i++){
-    lista.innerHTML += "<li>" + i + "</li>" 
+let num = parseInt(lista.dataset.num)
+
+let conteudo = ""
+
+for(let i = 1; i<=num; i++){
+    conteudo += "<li>" + i + "</li>"
 }
+
+lista.innerHTML = conteudo;
